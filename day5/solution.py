@@ -44,7 +44,6 @@ def main():
                         if l > range_in[0]:
                             ranges_part_2_not_changed.append([range_in[0], l])
                         ranges_part_2_changed.append([l + (dst_start - src_start), r + (dst_start - src_start)])
-                        # changed_part_2.append(len(ranges_part_2_tmp) - 1)
                         if r < range_in[1]:
                             ranges_part_2_not_changed.append([r, range_in[1]])
             ranges_part_2 = ranges_part_2_not_changed
