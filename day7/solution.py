@@ -27,18 +27,11 @@ class Hand:
 
     # Part 1
     def __calculate_cards_counter(self):
-        for c in self.hand:
-            match self.__cards.get(c):
-                case None: self.__cards[c] = 1
-                case n: self.__cards[c] = n + 1
+        self.__cards = dict(map(lambda c: (c, self.hand.count(c)), set(self.hand)))
 
     # Part 2
     def __calculate_cards_counter_without_jokers(self):
-        for c in self.hand:
-            if c != 'J':
-                match self.__cards_without_joker.get(c):
-                    case None: self.__cards_without_joker[c] = 1
-                    case n: self.__cards_without_joker[c] = n + 1
+        self.__cards_without_joker = dict(map(lambda c: (c, self.hand.count(c)), set(filter(lambda c: c != 'J', set(self.hand)))))
 
     def __calculate_type(self):
         card_vals = list(self.__cards.values())
