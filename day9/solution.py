@@ -22,4 +22,4 @@ def read_input():
 if __name__ == '__main__':
     result = main()
     print("Part 1: ", result[0])
-    print("Part 2: ", result[1]) # 248801421 too low
+    print("Part 2: ", result[1])
