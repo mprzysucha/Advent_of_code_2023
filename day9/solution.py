@@ -17,7 +17,7 @@ def main():
 
 def read_input():
     headers = {'Cookie': 'session={}'.format(open("../sessionId").readline())}
-    return requests.get("https://adventofcode.com/2023/day/8/input", headers=headers).text.splitlines()
+    return requests.get("https://adventofcode.com/2023/day/9/input", headers=headers).text.splitlines()
 
 if __name__ == '__main__':
     result = main()
